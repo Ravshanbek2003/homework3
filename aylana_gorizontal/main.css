@@ -1,0 +1,52 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(33, 31, 42);
+}
+.box{
+    position: relative;
+    margin-left: 25%;
+    margin-top: 25%;
+    width: 100px;
+    height: 100px;
+    background-color: #214e20;
+    border-radius: 50%; 
+}
+.box::after{
+    position: absolute;
+    content: '';
+    width: 100px;
+    height: 100px;
+    background-color: rgb(78, 244, 37);
+    top: 0;
+    left: 300px;
+    animation: run 2s ease-in-out .5s  ;
+    border-radius: 50%;
+}
+@keyframes run{
+    0%{
+        top: 0;
+        left: 300px;
+       
+       
+    }
+    50%{
+        transform: rotateX(0deg) rotateY(0deg) skewX(0deg);
+        top: 0;
+        left: 800px;
+    }
+    90%{
+        top: 0;
+        left: 700px;
+      
+        transform: rotateX(30deg) rotateY(520deg) skewX(30deg) ;
+     
+    }
+    100%{
+        top: 0;
+    left: 300px;
+    }
+}
